@@ -32,3 +32,5 @@ This repository contains the backend code for the Bitespeed identity reconciliat
 ## Deployed Link (test using Postman):
 
 [Deployed Link](http://34.14.199.11/identify)
+
+### PS: I've added indexing on email and phone number columns to optimize the search queries. It was not mentioned in the task but I believe it will help in performance in future when the data grows.
