@@ -29,6 +29,6 @@ This repository contains the backend code for the Bitespeed identity reconciliat
 
 [Postman Collection](https://documenter.getpostman.com/view/48905814/2sB3QFQrum)
 
-## Deployed Link:
+## Deployed Link (test using Postman):
 
 [Deployed Link](http://34.14.199.11/identify)
