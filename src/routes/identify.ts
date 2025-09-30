@@ -1,5 +1,5 @@
-const express = require("express");
-const router = express.Router();
+const expressServer = require("express");
+const router = expressServer.Router();
 const {
   findMatches,
   expandCluster,
