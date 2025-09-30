@@ -12,6 +12,7 @@ const { sendJson } = require("../utils/response");
 type IdentifyReq = { email?: string | null; phoneNumber?: string | null };
 
 router.post("/", async (req: any, res: any) => {
+  console.log("Received request:", req.body);
   const body = req.body as IdentifyReq;
   const email = body?.email ?? null;
   const phone = body?.phoneNumber ?? null;
@@ -50,11 +51,7 @@ router.post("/", async (req: any, res: any) => {
   const needsNewPhone = phone && !phonesSet.has(phone);
 
   if (needsNewEmail || needsNewPhone) {
-    await createSecondary(
-      primary.id,
-      email, 
-      phone 
-    );
+    await createSecondary(primary.id, email, phone);
   }
   await demoteOtherPrimaries(primary.id, cluster);
 
